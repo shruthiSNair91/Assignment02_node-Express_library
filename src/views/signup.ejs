@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/signUpStyle.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrapv4.4.1-.min.css" >
+    <link rel="stylesheet" href="css/signUpStyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Library | SignUp</title>
 </head>
 
@@ -19,23 +19,26 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" href="welcome.html">Home <span class="sr-only"></span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Authors</a>
+                <a class="nav-link" href="<%=nav[0].link%>"><%=nav[0].name%></a>
               </li>   
               <li class="nav-item">
-                <a class="nav-link" href="#">Books</a>
+                <a class="nav-link" href="<%=nav[1].link%>"><%=nav[1].name%></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" >Catalogue</a>
+                <a class="nav-link" href="<%=nav[2].link%>" ><%=nav[2].name%></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" >Contact</a>
+                <a class="nav-link" href="<%=nav[3].link%>" ><%=nav[3].name%></a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="<%=nav[4].link%>" ><%=nav[4].name%></a>
               </li>   
             </ul>
-            <a href="logIn.html" id="btnlogin"  class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">LogIn</a>
-            <a href="signUp.html" id="btnsignup"  class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">SignUp</a>
+            <!-- <a href="logIn.html" id="btnlogin"  class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">LogIn</a>
+            <a href="signUp.html" id="btnsignup"  class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">SignUp</a> -->
           </div>
         </nav>
         <!-- /navbar -->
@@ -45,7 +48,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-7">
-              <p id="heading">Library</p>
+              <p id="heading">Sign Up</p>
             </div>    
             <div class="col-md-5" >
               <div class="sideblock sideblock-lg"> 
@@ -74,7 +77,7 @@
         <!-- top space in blue head ends -->
     </div>
     <!-- sign Up form starts -->
-    <form action="/src/views/signin" onsubmit="return validateAll()"> 
+    <form action="/signin" onsubmit="return validateAll();"> 
         <div class="container">
           <div id="tophead">
           <h1>Sign Up</h1>
@@ -138,10 +141,10 @@
           </div>
         </div>
       </footer>
-
-      <script src="/js/jquery-3.4.1.slim.min.js" ></script>
-      <script src="/js/popper.min.js" ></script>
-      <script src="/js/bootstrap.min.js" ></script>
-      <script src="/js/signUp.js"></script>
+          
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+       <script src="js/signUp.js"></script>
 </body>
 </html>

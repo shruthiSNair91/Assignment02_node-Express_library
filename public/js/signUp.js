@@ -172,7 +172,7 @@ function validateConfirmPwd()
 
 function cancelSignup()
 {
-  window.location = "Home.html";
+  window.location = "/";
   return false;
 }
 

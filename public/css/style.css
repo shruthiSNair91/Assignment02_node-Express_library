@@ -76,6 +76,12 @@ ul a{
       background-color: #ffffff;
       box-sizing: border-box;
   }
+  .carousel slide{
+      position: relative;
+  }
+  .carousel-inner{
+      position: relative;
+  }
   img{
       position:relative;
       overflow: hidden;
