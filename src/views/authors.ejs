@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/bootstrapv3.2.0.min.css" >
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
-<title>Book</title>
+<title>Authors</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <p id="heading">Book</p>
+          <p id="heading">Authors</p>
         </div>    
         <div class="col-md-5" >
           <div class="sideblock sideblock-lg"> 
@@ -89,18 +89,19 @@
 
            <!--Authors details-->
            <div class="col-xs-8"></div> 
+            <%for(i=0;i<authors.length;i++){%>
            <div class="row"> 
               <br>   
               <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=book.img%>" style="width:100px;height:100px" class="img-circle"></a>
+                <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
               </div>
               <div class="col-md-10 col-sm-9">
-                <h3><%=book.title%></h3>
+                <h3><%=authors[i].name%></h3>
                 <div class="row">
                   <div class="col-xs-9">
-                    <p><span style="background-color: #888686;"><%=book.author%></span></p>
-                    <h6 style="font-family:courier,'new courier';"><%=book.genre%>  • 
-                        
+                    <p><span style="background-color: #888686;"><%=authors[i].genre%></span></p>
+                    <h6 style="font-family:courier,'new courier';"><%=authors[i].genre%>  • 
+                        <a href="/author/<%=i%>">Read More</a>
                     </h4>
                   </div>
                   <div class="col-xs-3"></div>
@@ -109,8 +110,8 @@
               </div>
             </div>
             <hr>
-            
-               <div class="row">
+            <%}%>
+                <div class="row">
               <a href="#" id="btnmore" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
             </div>
             <hr>   

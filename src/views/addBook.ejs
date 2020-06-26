@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/bootstrapv3.2.0.min.css" >
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
-<title>Book</title>
+<title>Add Book</title>
 </head>
 
 <body>
@@ -30,7 +30,6 @@
             <%for(i=0;i<nav.length;i++){%>
               <li>
                   <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
-                
               </li>
               <%}%>
           </ul>
@@ -55,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <p id="heading">Book</p>
+          <p id="heading">Books</p>
         </div>    
         <div class="col-md-5" >
           <div class="sideblock sideblock-lg"> 
@@ -88,29 +87,22 @@
         <div class="panel_body" >
 
            <!--Authors details-->
-           <div class="col-xs-8"></div> 
-           <div class="row"> 
-              <br>   
-              <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=book.img%>" style="width:100px;height:100px" class="img-circle"></a>
-              </div>
-              <div class="col-md-10 col-sm-9">
-                <h3><%=book.title%></h3>
+
+           <div>
+            <label style="font-weight: bold;">Book : </label>
+            <input type="text" placeholder="enter book title"></input><br>
+            <label style="font-weight: bold;">Author : </label>
+            <input type="text" placeholder="enter author name"></input><br>
+            <label style="font-weight: bold;">Genre : </label>
+            <input type="text" placeholder="enter book Genre"></input><br>
+            <label style="font-weight: bold;">Book File : </label>
+            <input type="file" ></input><br>
+            <a href="/addBook/single" id="addBook" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Add</a>
+
+       </div>
+
+
                 <div class="row">
-                  <div class="col-xs-9">
-                    <p><span style="background-color: #888686;"><%=book.author%></span></p>
-                    <h6 style="font-family:courier,'new courier';"><%=book.genre%>  • 
-                        
-                    </h4>
-                  </div>
-                  <div class="col-xs-3"></div>
-                </div>
-                <br><br>
-              </div>
-            </div>
-            <hr>
-            
-               <div class="row">
               <a href="#" id="btnmore" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
             </div>
             <hr>   
@@ -161,5 +153,6 @@
 <script src="/js/popper.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="addbook.js"></script>
 </body>
 </html>
